@@ -1,0 +1,33 @@
+.articles-layout {
+    margin: 0 auto;
+    width: 90%;
+    .title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 38px;
+        margin: 50px 0 32px 54px;
+    }
+    .tabs-list {
+        margin-left: 39px;
+        display: flex;
+        flex-direction: row;
+    }
+    .tab {
+        align-self: center;
+        padding: 12px 20px;
+        border-radius: 3px;
+        margin: 0 15px;
+        color: #8A8A8A;
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid #B1B1B1;
+        box-shadow: 0px 10px 15px rgba(248, 248, 248, 0.5);
+    }
+    .selected-tab {
+        color: #FF20E9;
+        border: 1px solid #FF4DED;
+        box-shadow: 0px 15px 25px #FDEDFF;
+
+    }
+}
+
