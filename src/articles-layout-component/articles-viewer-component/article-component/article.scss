@@ -1,12 +1,12 @@
 .article-box {
     width: 80%;
-    margin: 0 auto;
+    margin: 50px auto 0;
     .article {
         background-size: cover;
         background-image: url('../../../images/article-border.svg');
         background-repeat: no-repeat;
         background-position: center;
-        height: 428px;
+        height: 478px;
         margin: -50px auto 0;
         padding: 50px 60px;
         .article-text {
@@ -18,7 +18,7 @@
     .row {
         display: flex;
         width: 90%;
-        margin: 0 auto;
+        margin: 30px auto 70px auto;
         justify-content: space-between;
         .article-title {
             font-weight: bold;

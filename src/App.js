@@ -1,5 +1,5 @@
 import React from 'react';
-import ArticlesLayout from './ArticlesLayoutComponent/articles-layout-component';
+import ArticlesLayout from './articles-layout-component/articles-layout-component';
 
 function App() {
   return (

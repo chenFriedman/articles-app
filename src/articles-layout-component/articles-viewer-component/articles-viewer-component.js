@@ -5,10 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './articles-viewer.scss';
-import Article from './ArticleComponent/Article.component';
-
-
-// import './articles-layout-component.scss';
+import Article from './article-component/article';
 
 const ArticlesViewer = (props) => {
     const settings = {
@@ -17,7 +14,8 @@ const ArticlesViewer = (props) => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        draggable: true
+        draggable: true,
+        arrows: true
     };
       function renderArticles() {
         //   let art = props.articles;

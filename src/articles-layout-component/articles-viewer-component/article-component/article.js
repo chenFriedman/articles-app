@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './Article.scss';
+import './article.scss';
 
 const Article = (props) => {
     const [loveCounter, setLoveCounter] = useState(0);

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './articles-layout-component.scss';
 import {articlesConfig} from './articles-config.js';
-import ArticlesViewer from './articlesViewerComponent/articles-viewer-component';
+import ArticlesViewer from './articles-viewer-component/articles-viewer-component';
 
 const ArticlesLayout = () => {
     let tabs = [{name: 'Games', articles: ''}, {name: 'Anime', articles: ''}, {name: 'ASMR', articles: ''}];
