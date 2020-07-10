@@ -1,3 +1,62 @@
+@import '../../../style/media-queries.scss';
+
+@mixin article-mobile-view {     
+    width: 100%;
+    .article {
+        padding: 40px 40px 0 40px;
+        background-image: none;
+        border-top: 2px solid #FFE8FD;
+        box-shadow: 0px -20px 20px #FEFAFF;
+        border-radius: 25px;
+        height: auto;
+        .article-text {
+            font-size: 17px;
+            line-height: 38px;
+        }
+    }
+    .row {
+        width: 100%;
+        margin: 70px auto 24px;
+        .article-title {
+            font-size: 22px;
+        }
+        .love {
+            font-size: 18px;
+            .love-img {}
+        }
+    }
+    .qute-img {
+        width: 80px;
+        height: 80px;
+    }
+    .left {
+        margin-left: 40px;
+        .profile-img {
+            width: 50px;
+            height: 50px;
+        }
+        .writer {
+            margin-left: 15px;
+            .name {
+                font-size: 20px;
+                line-height: 27px;
+            }
+            .address {
+                margin-top: 0;
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+    }
+    .contact-btn {
+        width: 100px;
+        margin-right: 40px;
+        padding: 7px 0;
+        height: 28px;
+        font-size: 19px;
+    }
+}
+
 .article-box {
     width: 80%;
     margin: 50px auto 0;
@@ -83,7 +142,21 @@
         box-shadow: 1px 10px 60px #F3C0E5;
         border-radius: 50px;
         font-weight: bold;
-        font-size: 28px;
+        font-size: 26px;
         color: #FFFFFF;
-    }  
+        text-align: center;
+        text-transform: uppercase;
+
+    }
+
+    @include respondTo(ipadLandscape) {
+    }
+
+    @include respondTo(smallMobile) {
+        @include article-mobile-view();
+        
+    }
+    @include respondTo(ipadPortrait) {
+        @include article-mobile-view();
+    }
 }

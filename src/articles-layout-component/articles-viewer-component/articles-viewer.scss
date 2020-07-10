@@ -1,4 +1,9 @@
+@import '../../style/media-queries.scss';
+
 .articles-viewer  {
+  .slick-prev:before, .slick-next:before{
+    content: none;
+  }
   .slick-next {
       background-image: url('../../images/arrow-next.svg');
       background-repeat: no-repeat;
@@ -11,4 +16,26 @@
       width: 50px;
       height: 50px;
   }
+  @include respondTo(smallMobile) {
+    .slick-next {
+      background-image: url('../../images/next-mobile.svg');
+      background-size: cover;
+      top: 20%;
+      right: 40px;
+      width: 72px;
+      height: 44px;
+      margin-top: -50px;
+    }
+    .slick-prev {
+      background-image: url('../../images/prev-mobile.svg');
+      background-size: cover;
+      top: 20%;
+      margin-left: -15px;
+      left: 40px;
+      width: 91px;
+      height: 44px;
+      margin-top: -50px;
+    }
+  }
+  @include respondTo(ipadPortrait) {}
 }
