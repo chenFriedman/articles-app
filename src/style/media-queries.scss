@@ -4,7 +4,7 @@
     } @else if $media == smallMobile {
       @media screen and (min-width: 320px)and (max-width:768px) { @content; }
     } @else if $media == mobile {
-      @media screen and (min-width: 400px)and (max-width:567px) { @content; }
+      @media screen and (min-width: 424px)and (max-width:567px) { @content; }
     } @else if $media == smallMobileLandscape {
       @media screen and (min-width: 568px)and (max-width:677px) { @content; }
     } @else if $media == ipadPortrait {

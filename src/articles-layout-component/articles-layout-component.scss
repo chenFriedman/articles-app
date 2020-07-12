@@ -3,16 +3,20 @@
 @mixin article-layot-mobile-view {
     width: 100%;
     .title {
+        width: auto;
         margin-left: 0;
         text-align: center;
         font-size: 32px;
     }
     .tabs-list {
+        width: auto;
         margin-left: 0;
         justify-content: center;
     }
     .tab {
-        padding: 7px 15px; 
+        padding: 7px 10px;
+        font-size: 13px;
+        margin: 0px 9px;
     }
 }
 
@@ -23,12 +27,19 @@
         font-style: normal;
         font-weight: bold;
         font-size: 38px;
-        margin: 50px 0 32px 54px;
+        // margin: 50px 0 32px 54px;
+        width: 930px;
+        margin: 50px auto 32px;
     }
     .tabs-list {
         margin-left: 39px;
         display: flex;
         flex-direction: row;
+        width: 930px;
+        margin: 0 auto;
+    }
+    .tabs-list :first-child {
+        margin-left: 0;
     }
     .tab {
         align-self: center;
@@ -49,16 +60,25 @@
     }
 
     @include respondTo(ipadLandscape) {
-        width: 100%;
+        // width: 100%;
+        
+        width: 740px;
+        margin: 0 auto;
+        .title {
+            width: auto;
+        }
+        .tabs-list {
+            width: auto
+        }
     }
 
     @include respondTo(smallMobile) {
         @include article-layot-mobile-view();
         
     }
-    // @include respondTo(ipadPortrait) {
-    //     @include article-layot-mobile-view();
-    // }
+    @include respondTo(ipadPortrait) {
+        @include article-layot-mobile-view();
+    }
 }
 
 

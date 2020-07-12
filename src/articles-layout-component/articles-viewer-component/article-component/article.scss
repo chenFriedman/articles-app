@@ -1,33 +1,8 @@
 @import '../../../style/media-queries.scss';
 
-@mixin article-mobile-view {     
-    width: 100%;
+@mixin article-mobile-view {
     .article {
-        padding: 40px 40px 0 40px;
-        background-image: none;
-        border-top: 2px solid #FFE8FD;
-        box-shadow: 0px -20px 20px #FEFAFF;
-        border-radius: 25px;
-        height: auto;
-        .article-text {
-            font-size: 17px;
-            line-height: 38px;
-        }
-    }
-    .row {
-        width: 100%;
-        margin: 70px auto 24px;
-        .article-title {
-            font-size: 22px;
-        }
-        .love {
-            font-size: 18px;
-            .love-img {}
-        }
-    }
-    .qute-img {
-        width: 80px;
-        height: 80px;
+        padding: 40px 40px 0;
     }
     .left {
         margin-left: 40px;
@@ -49,11 +24,72 @@
         }
     }
     .contact-btn {
-        width: 100px;
+        width: 114px;
         margin-right: 40px;
-        padding: 7px 0;
-        height: 28px;
-        font-size: 19px;
+        padding: 12px 0;
+        height: 23px;
+        font-size: 17px;
+    }
+}   
+
+@mixin article-small-mobile-view {     
+    width: 100%;
+    .article {
+        
+        padding: 40px 15px 0;
+        background-image: none;
+        border-top: 2px solid #FFE8FD;
+        box-shadow: 0px -20px 20px #FEFAFF;
+        border-radius: 25px;
+        height: auto;
+        .article-text {
+            font-size: 16px;
+            line-height: 32px;
+            margin-top: 0;
+        }
+    }
+    .row {
+        width: 100%;
+        margin: 60px auto 24px;
+        .article-title {
+            font-size: 22px;
+        }
+        .love {
+            font-size: 18px;
+        }
+    }
+    .qute-img {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+    }
+    .contact-row {
+        margin: -30px auto 50px;
+    }
+    .left {
+        margin-left: 15px;
+        .profile-img {
+            width: 37px;
+            height: 37px;
+        }
+        .writer {
+            margin-left: 10px;
+            .name {
+                font-size: 16px;
+                line-height: 17px;
+            }
+            .address {
+                font-size: 14px;
+                line-height: 0;
+            }
+        }
+    }
+    .contact-btn {
+        width: 88px;
+        margin-right: 15px;
+        padding: 6px 0;
+        height: 21px;
+        font-size: 15px;
     }
 }
 
@@ -61,17 +97,17 @@
     width: 80%;
     margin: 50px auto 0;
     .article {
-        background-size: cover;
-        background-image: url('../../../images/article-border.svg');
+        background-image: url('../../../images/article-border-pc.svg');
         background-repeat: no-repeat;
         background-position: center;
-        height: 478px;
-        margin: -50px auto 0;
-        padding: 50px 60px;
-        .article-text {
-            margin-top: 26px;
+        background-size: 1080px 505px;
+        margin: -59px auto 0;
+        padding: 76px 66px;
+        .article-text { 
+            margin-bottom: 102px;
             font-size: 20px;
-            line-height: 44px; 
+            line-height: 44px;
+            padding: 0px 40px;
         }
     }
     .row {
@@ -106,8 +142,11 @@
         background-repeat: no-repeat;
         width: 105px;
         height: 105px;
-        margin: 0 auto;
+        margin: 0 auto -131px;
         position: relative;
+    }
+    .contact-row {
+        margin-top: -30px;
     }
     .left {
         display: flex;
@@ -150,13 +189,23 @@
     }
 
     @include respondTo(ipadLandscape) {
+        width: auto;
+            .article {
+                background-image: url('../../../images/border-small-pc.svg');
+                background-size: unset;
+                margin: 0;
+                padding: 0;
+        }
     }
-
     @include respondTo(smallMobile) {
-        @include article-mobile-view();
-        
+        @include article-small-mobile-view();
+    }
+    @include respondTo(mobile) {
     }
     @include respondTo(ipadPortrait) {
+        @include article-mobile-view();
+    }
+    @include respondTo(smallMobileLandscape) {
         @include article-mobile-view();
     }
 }

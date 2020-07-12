@@ -18,7 +18,7 @@ console.log(props)
                 </div>
             <div className='article-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra ante eu odio sagittis tristique. Suspendisse at faucibus ex. Duis porttitor porttitor lectus, quis commodo dui fringilla ut. Nunc eu volutpat lacus. Donec vulputate, tortor in laoreet egestas, purus purus accumsan ipsum, vel lobortis ante libero a diam. Duis porttitor porttitor lectus, quis commodo dui dui fringilla ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra ante eu odio sagittis tristique.</div>
             </div>
-            <div className='row'>
+            <div className='row contact-row'>
                 <div className='left'>
                     <div className='profile-img'/>
                     <div className='writer'>
