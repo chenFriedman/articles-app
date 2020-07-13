@@ -2,6 +2,28 @@
 
 @mixin mobile-layout {  
   .slick-next {
+    background-image: url('../../images/next-mobile.svg');
+    background-size: cover;
+    top: 185px;
+    right: 15px;
+    width: 72px;
+    height: 44px;
+    margin-top: -50px;
+  }
+  .slick-prev {
+    background-image: url('../../images/prev-mobile.svg');
+    background-size: cover;
+    top: 185px;
+    margin-left: -15px;
+    left: 15px;
+    width: 91px;
+    height: 44px;
+    margin-top: -50px;
+  }
+}
+
+@mixin tablet-layout {  
+  .slick-next {
     right: 40px;
   }
   .slick-prev {
@@ -10,53 +32,29 @@
 }
 
 .articles-viewer  {
-  .slick-prev:before, .slick-next:before{
+  .slick-prev:before, .slick-next:before {
     content: none;
   }
-  .slick-next {
+  .slick-next, .slick-prev {
       background-image: url('../../images/arrow-next.svg');
       background-repeat: no-repeat;
-      // width: 50px;
-      // height: 50px;
       width: 15px;
       height: 26px;
+      top: 44%;
   }
   .slick-prev {
       background-image: url('../../images/arrow-prev.svg');
-      background-repeat: no-repeat;
-      // width: 50px;
-      // height: 50px;
-      width: 15px;
-      height: 26px;
   }
   @include respondTo(smallMobile) {
-    .slick-next {
-      background-image: url('../../images/next-mobile.svg');
-      background-size: cover;
-      top: 185px;
-      right: 15px;
-      width: 72px;
-      height: 44px;
-      margin-top: -50px;
-    }
-    .slick-prev {
-      background-image: url('../../images/prev-mobile.svg');
-      background-size: cover;
-      top: 185px;
-      margin-left: -15px;
-      left: 15px;
-      width: 91px;
-      height: 44px;
-      margin-top: -50px;
-    }
+    @include mobile-layout();
   }
-  @include respondTo(mobile) {
+  @include respondTo(smallMobile) {
     @include mobile-layout();
   }
   @include respondTo(smallMobileLandscape) {
-    @include mobile-layout();
+    @include tablet-layout();
   }
   @include respondTo(ipadPortrait) {
-    @include mobile-layout();
+    @include tablet-layout();
   }
 }

@@ -1,65 +1,68 @@
 @import '../../../style/media-queries.scss';
 
-@mixin article-mobile-view {
-    .article {
-        padding: 40px 40px 0;
-    }
-}   
-
-@mixin article-small-mobile-view {     
-    width: 100%;
-    .article {
-        padding: 40px 15px 0;
-        background-image: none;
-        border-top: 2px solid #FFE8FD;
-        box-shadow: 0px -20px 20px #FEFAFF;
-        border-radius: 25px;
-        height: auto;
-        .article-text {
-            font-size: 16px;
-            line-height: 32px;
-            margin: 0;
-            padding: 0;
-        }
-    }
-    .row {
-        width: 100%;
-        margin: 60px auto 24px;
-        .article-title {
-            font-size: 22px;
-        }
-        .love {
-            font-size: 18px;
-        }
-    }
-    .qute-img {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto;
-    }
-}
-
 .article-box {
+    @mixin article-mobile-view {
+        .article {
+            padding: 40px 40px 0;
+        }
+    }
+    @mixin article-small-mobile-view {     
+        width: 100%;
+        .article {
+            padding: 40px 15px 0;
+            background-image: none;
+            border: none;
+            border-top: 2px solid #FFE8FD;
+            box-shadow: 0px -20px 20px #FEFAFF;
+            border-radius: 25px;
+            height: auto;
+            margin: -60px auto 30px;
+            .article-text {
+                font-size: 16px;
+                line-height: 32px;
+                margin: 0;
+                padding: 0;
+                height: auto;
+                overflow: unset;
+            }
+        }
+        .row {
+            width: 100%;
+            margin: 60px auto 24px;
+            .article-title {
+                font-size: 22px;
+            }
+            .love {
+                font-size: 18px;
+            }
+        }
+        .qute-img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
     width: 80%;
     margin: 50px auto 0;
     .article {
-        background-image: url('../../../images/article-border-pc.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 1080px 505px;
-        margin: -59px auto 0;
-        padding: 76px 66px;
+        border: 2px solid #FFE8FD;
+        box-sizing: border-box;
+        box-shadow: 0px 30px 30px #FEFAFF;
+        border-radius: 10px;
+        margin: -60px auto 60px;
+        padding: 35px;
         .article-text { 
-            margin-bottom: 102px;
             font-size: 20px;
             line-height: 44px;
-            padding: 0px 40px;
+            padding: 0px 40px 40px;
+            height: 400px;
+            overflow: scroll;
         }
     }
     .row {
         display: flex;
         width: 90%;
-        margin: 30px auto 70px auto;
+        margin: 30px auto;
         justify-content: space-between;
         .article-title {
             font-weight: bold;
@@ -88,17 +91,11 @@
         background-repeat: no-repeat;
         width: 105px;
         height: 105px;
-        margin: 0 auto -131px;
+        margin: 0 auto;
         position: relative;
     }
     @include respondTo(ipadLandscape) {
         width: auto;
-            .article {
-                background-image: url('../../../images/border-small-pc.svg');
-                background-size: unset;
-                margin: 0;
-                padding: 0;
-        }
     }
     @include respondTo(smallMobile) {
         @include article-small-mobile-view();
