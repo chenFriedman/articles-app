@@ -11,7 +11,7 @@ const Article = (props) => {
 		    <div className='article'>
                 <div className='row'>
                     <div className='article-title'>{props.title}</div>
-                    <div className='love' onClick={() => setLoveCounter(loveCounter + 1)}>
+                    <div className='love' onClick={() => setLoveCounter(Number(loveCounter) + 1)}>
                         <div className='love-counter'>{loveCounter}</div>
                         <div className='love-img' />
                     </div>
