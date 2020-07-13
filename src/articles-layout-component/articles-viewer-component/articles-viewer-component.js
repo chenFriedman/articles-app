@@ -18,24 +18,24 @@ const ArticlesViewer = (props) => {
         arrows: true
     };
       function renderArticles() {
-        //   let art = props.articles;
-            // const articlesList = (props.articles).map(article => (
-            //     // <Article key={article.Title}/>
-            //     <div>{article.Title}</div>
-            //   ));
-            //   return (
-            //     <div className="articles-list">
-            //       {articlesList}
-            //     </div>
-            //   );
+            const articlesList = (props.articles).map(article => (
+                <div><Article 
+                    title={article.Title}
+                    text={article.Text}
+                    love={article.Love}
+                    PublisherInfo={article.PublisherInfo}/>
+                </div>
+              ));
+              return (
+                <Slider {...settings}>
+                  {articlesList}
+                </Slider>                
+
+              );
         }
 
 	return (
 		<div className='articles-viewer'>
-        <Slider {...settings}>
-            <div><Article data='1'/></div>
-            <div><Article data='2'/></div>
-        </Slider>
             {renderArticles()}
       </div>
 	)

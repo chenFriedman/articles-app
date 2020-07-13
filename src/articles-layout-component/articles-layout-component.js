@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './articles-layout-component.scss';
-import {articlesConfig} from './articles-config.js';
 import ArticlesViewer from './articles-viewer-component/articles-viewer-component';
+let articlesViewer = require('./articles-config.json');
 
 const ArticlesLayout = () => {
     let tabs = [{name: 'Games', articles: ''}, {name: 'Anime', articles: ''}, {name: 'ASMR', articles: ''}];
     const [selectedTab, setSelectedTab] = useState({selectedTab: 'Games'});
     
-    useEffect(() => {
-        tabs.map(tab => {
-            tab.articles = articlesConfig.filter(article => article.Subject === tab.name);})
-      }, [])
+    tabs.map(tab => {
+      tab.articles = articlesViewer.filter(article => article.Subject === tab.name);
+    });
     
     function handleArticleSelected(selectedTab) {
         setSelectedTab({selectedTab});
@@ -32,7 +31,7 @@ const ArticlesLayout = () => {
 		<div className='articles-layout'>
             <h3 className='title'>Article</h3>
             {renderNavbar()}
-            <ArticlesViewer articles={tabs.find(tab => tab.name === selectedTab.selectedTab)} />
+            <ArticlesViewer articles={(tabs.find(tab => tab.name === selectedTab.selectedTab)).articles} />
         </div>
 	)
 };
