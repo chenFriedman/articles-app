@@ -3,7 +3,7 @@ import './contact.scss';
 
 const Contact = (props) => {
 	return (   
-        <div className='row contact-row'>
+        <div className='contact-row'>
             <div className='left'>
                 <div className={props.gender === 'Female' ? 'profile-img' : 'profile-img male-img'}/>
                 <div className='writer'>
