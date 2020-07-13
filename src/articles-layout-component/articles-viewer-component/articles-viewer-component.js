@@ -19,7 +19,6 @@ const ArticlesViewer = (props) => {
     };
       function renderArticles() {
         //   let art = props.articles;
-          console.log(props.articles);
             // const articlesList = (props.articles).map(article => (
             //     // <Article key={article.Title}/>
             //     <div>{article.Title}</div>
@@ -30,7 +29,6 @@ const ArticlesViewer = (props) => {
             //     </div>
             //   );
         }
-    // console.log(props);
 
 	return (
 		<div className='articles-viewer'>

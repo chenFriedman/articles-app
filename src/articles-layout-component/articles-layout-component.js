@@ -14,7 +14,6 @@ const ArticlesLayout = () => {
     
     function handleArticleSelected(selectedTab) {
         setSelectedTab({selectedTab});
-        console.log(selectedTab);
     }
 
     function renderNavbar() {

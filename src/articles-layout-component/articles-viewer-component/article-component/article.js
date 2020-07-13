@@ -4,7 +4,6 @@ import './article.scss';
 const Article = (props) => {
     const [loveCounter, setLoveCounter] = useState(0);
 
-console.log(props)
 	return (
         <div className='article-box'>
             <div className='qute-img' />
