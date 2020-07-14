@@ -19,7 +19,9 @@ const ArticlesViewer = (props) => {
     };
       function renderArticles() {
             const articlesList = (props.articles).map(article => (
-                <div><Article 
+                <div key={article.Title}>
+                  <Article 
+                    key={article.Title}
                     title={article.Title}
                     text={article.Text}
                     love={article.Love}
