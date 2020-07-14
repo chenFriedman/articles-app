@@ -12,13 +12,13 @@ class App extends React.Component {
   };
 
     componentDidMount() {
-      this.getUserData();
+      // this.getUserData();
     };
     
     componentDidUpdate(prevProps, prevState) {
-      if (prevState !== this.state) {
-        this.writeUserData();
-      }
+      // if (prevState !== this.state) {
+      //   this.writeUserData();
+      // }
     }
 
     writeUserData = () => {
@@ -32,7 +32,7 @@ class App extends React.Component {
         let newstate = [];
         for (let article in articlesdb) {
           newstate.push({
-            articleTitle: articlesdb[article].Title
+            articleTitle: article.Title
           });
         }
         this.setState({articlesdb: newstate});
